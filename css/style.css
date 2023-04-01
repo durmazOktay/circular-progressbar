@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: var(--progTextColor);
+    font-size: var(--progTextSize);
+    text-decoration: none;
+}
+
+:root
+{
+    /*Container*/
+    --containerSize: 11rem;
+    --containerColor: #F5F5F5;
+
+    /*Circle*/
+    --circleSize:10.688rem;
+    --circleColor:#758582;
+
+    --progTextSize:2rem;
+    --progTextColor: #9EA1A9;
+}
+
+body,.container,.circle,.circle > span,a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+body
+{
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container,.circle
+{
+    width: var(--containerSize);
+    height: var(--containerSize);
+    background-color: var(--circleColor);
+    border-radius: 50%;
+}
+
+.circle
+{
+    background: conic-gradient(var(--containerColor) 80%,transparent 0);
+}
+
+.circle > span
+{
+    width: var(--circleSize);
+    height: var(--circleSize);
+    background-color: white;
+    border-radius: 50%;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width:768px) 
+{
+    .container,.circle
+    {
+        width: 8.75rem;
+        height: 8.75rem;
+    }
+
+    .circle > span
+    {
+        width: 8.438rem;
+        height: 8.438rem;
+    }
+}
+
+@media screen and (max-width:768px) 
+{
+    .container,.circle
+    {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .circle > span
+    {
+        width: 4.688rem;
+        height: 4.688rem;
+    }
+}
+
+/*YOUTUBE*/
+a
+{
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+}
+
+a,a > ion-icon
+{
+    font-size: 0.5rem;;
+}
